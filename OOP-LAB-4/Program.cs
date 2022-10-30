@@ -27,9 +27,9 @@ namespace OOP_LAB_4
             stk.Push(linda);
             stk.Push(jack);
 
-            foreach (var item in stk)
+            foreach (object obj in stk)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(obj.ToString());
                 Console.WriteLine($"Items left in stack : {stk.Count}");
                 Console.WriteLine("------------------------------");
             }
@@ -59,13 +59,11 @@ namespace OOP_LAB_4
                 Console.WriteLine($"Items left in stack : {stk.Count}");
                 Console.WriteLine("------------------------------");
             }
-            if (stk.Contains(karen))
-            {
-                Console.WriteLine("Karen is in the stack");
-            }
+            string exists = stk.Contains(karen) ? "Karen is in the stack" : "Karen is not in the stack";
+            Console.WriteLine(exists);
 
         }
-        
+
         static void PartTwo()
         {
             var list = new List<Employee> { };
@@ -81,18 +79,12 @@ namespace OOP_LAB_4
             list.Add(linda);
             list.Add(jack);
 
-            if (list.Contains(joe))
-            {
-                Console.WriteLine("Joe exists in the list");
-            }
-            else
-            {
-                Console.WriteLine("Joe does not exist in the list");
-            }
+            string exist = list.Contains(joe) ? "Joe exists in the list" : "Joe does not exist in the list";
+            Console.WriteLine("\n" + exist);
 
             // Uses lambda expression to create method to specify what we are looking for 
             // as of "args => expression" model.
-            Console.WriteLine("First employee in list that is male is " 
+            Console.WriteLine("\nFirst employee in list that is male is "
             + list.Find(x => x.Gender.Contains("Male")));
 
             // Use of IEnumerable to create a "temporary" listinterface of male employees as IEnumerable
