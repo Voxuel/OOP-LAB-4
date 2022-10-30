@@ -18,5 +18,9 @@ namespace OOP_LAB_4
             Gender = _gender;
             Salery = _salery;
         }
+        public override string ToString()
+        {
+            return ID + " - " + Name + " - " + Gender + " - " + Salery;
+        }
     }
 }
