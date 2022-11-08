@@ -4,6 +4,7 @@ using System.Collections;
 
 namespace OOP_LAB_4
 {
+    // Leo F SUT22
     class Program
     {
         static void Main(string[] args)
