@@ -87,10 +87,8 @@ namespace OOP_LAB_4
             // as of "arg => expression" model.
             Console.WriteLine("\nFirst employee in list that is male is "
             + list.Find(x => x.Gender.Contains("Male")));
-
-            // Use of IEnumerable to create a "temporary" listinterface of male employees as IEnumerable
-            // does not load unless called in our foreach and also returns an generic Employee<T>;
-            IEnumerable<Employee> allMale = list.FindAll(x => x.Gender.Contains("Male"));
+            
+            var allMale = list.FindAll(x => x.Gender.Contains("Male"));
             Console.WriteLine("\nAll employees who are male");
             foreach (object obj in allMale)
             {
